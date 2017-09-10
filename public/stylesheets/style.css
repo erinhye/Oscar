@@ -71,6 +71,8 @@ a:hover, a:active {
 }
 .header, #footer {
   z-index: 5;
+  max-height: 5rem;
+  /*border: 1px solid blue;*/
 }
 .contents {
   margin-top: 3rem ;
