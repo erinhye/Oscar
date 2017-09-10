@@ -96,16 +96,16 @@ a:hover, a:active {
 }
 .contents h1, h2 {
   text-align: center;
-  margin: 7rem auto 5rem auto;
+  margin: 10rem auto 5rem auto;
 }
 
 .contents h1 {
-  font-size: 7rem;
+  font-size: 6.7rem;
   animation: fadein 0.9s linear forwards;
   opacity: 0;
 }
 .contents h2 {
-  font-size: 4rem;
+  font-size: 3.7rem;
   margin: 3rem auto;
   animation: fadein 0.9 linear forwards;
   -webkit-animation-delay: 0.9s;
@@ -119,6 +119,9 @@ a:hover, a:active {
   -webkit-animation-delay: 2.7s;
 }
 .contents h1:nth-child(5) {
+  font-size: 8rem;
+  margin-top:6rem;
+
   -webkit-animation-delay: 3.6s;
 }
 
