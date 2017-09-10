@@ -51,6 +51,30 @@ a:hover, a:active {
   /*border: 0.1rem solid black;*/
 
 }
+#footer {
+  margin-top: 3rem;
+  margin: 0;
+
+  /*border: 0.1rem solid black;*/
+  position: fixed;
+  bottom:1rem;
+
+  /* center the element */
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  /* give it dimensions */
+  /*min-height: 10em;*/
+  width: 90%;
+
+
+}
+#footer p {
+  font-size: 1rem;
+  line-height: 1.7rem;
+  text-align: right;
+}
 
 .header p {
   font-size: 2rem;
