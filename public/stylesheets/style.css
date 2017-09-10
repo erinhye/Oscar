@@ -39,7 +39,21 @@ a:hover, a:active {
   height: 100%;
 }
 .header {
-  width: 100%;
+
+  position: fixed;
+  bottom:1rem;
+
+  /* center the element */
+  right: 0;
+  left: 0;
+  top:0.3rem;
+  margin-right: auto;
+  margin-left: auto;
+  /* give it dimensions */
+  /*min-height: 10em;*/
+  width: 90%;
+
+  /*width: 100%;*/
   margin:0.3rem auto;
   /*border: 0.1rem solid black;*/
 
