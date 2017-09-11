@@ -1,5 +1,5 @@
 .chat-container {
-  width : 50%;
+  width : 55%;
   /*margin-top: 3rem;*/
   /*margin: 7rem auto 7rem auto;*/
   /*border: 1px solid black;*/
@@ -27,6 +27,7 @@
 
   font-size: 1.4rem;
   line-height: 3rem;
+  width: 100%;
   /*margin: 4rem auto;*/
 }
 
@@ -35,12 +36,39 @@
   text-align: right;
 }
 .blank-space {
-  width: 100%;
+  width: 3.5rem;
   height: 4rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+.icon {
+  width: 3.5rem;
+  height: 4rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+.oscar {
+  float: left;
+  clear: both;
+  /*background-color: red;*/
+  background-image: url('../images/oscar-icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.me {
+  /*background-color: blue;*/
+  float: right;
+  clear : both;
+  background-image: url('../images/me-1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }
 
 #typing-container {
-  width: 50%;
+  width: 55%;
   height: 3rem;
   position: fixed;
   background-color: white;
