@@ -115,6 +115,11 @@ a:hover, a:active {
   line-height: 1.7rem;
   text-align: right;
 }
+#title img {
+	width: 7.8rem;
+	margin-top: 0.25rem;
+	height: auto;
+}
 
 .header p {
   font-size: 2rem;
