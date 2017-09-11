@@ -3,8 +3,8 @@
   /*margin-top: 3rem;*/
   /*margin: 7rem auto 7rem auto;*/
   /*border: 1px solid black;*/
-  margin-top: -3rem;
-  height: 70vh;
+  margin-top: -3.8rem;
+  height: 68vh;
 
   position: fixed;
   top: 50%;
@@ -25,7 +25,7 @@
   margin-left: 2.5rem;
   margin-right: 2.5rem;
 
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 3rem;
   width: auto;
   /*margin: 4rem auto;*/
@@ -69,15 +69,37 @@
 
 #typing-container {
   width: 55%;
-  height: 3rem;
+  height: 4rem;
   position: fixed;
-  background-color: white;
-  border: 1px solid white;
-  bottom: 7rem;
+  bottom: 6rem;
+  /*border: 1px solid white;*/
 
   right: 0;
   left: 0;
   margin-right: auto;
   margin-left: auto;
 
+
+}
+input {
+  font-size : 1.3rem;
+  transition: all 0.2s ease-in-out;
+  height: 3rem;
+  background-color: white;
+  /*border: 1px solid white;*/
+  margin: 0 2.3rem;
+  width: 82%;
+  padding: 0 0.8rem;
+  /*float: left;*/
+  display: inline-block;
+}
+#send, #send img {
+  width : 3.3rem;
+  height: 3.3rem;
+  /*border: 1px solid white;*/
+  display: inline-block;
+  vertical-align: bottom;
+
+
+  /*float: right;*/
 }

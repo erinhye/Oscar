@@ -152,8 +152,14 @@ a:hover, a:active {
   -webkit-animation-delay: 3.6s;
 }
 
+.contents h1 a img {
+	width: 9rem;
+	height: 9rem;
+	margin-top: -1.7rem;
+}
+
 #introduction {
-  margin-top: -5rem;
+  margin-top: -3rem;
   position: fixed;
   width: 90%;
   top: 50%;
