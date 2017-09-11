@@ -22,10 +22,15 @@
 
 .oscar-chats, .me-chat {
   text-align: left;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+
   font-size: 1.4rem;
   line-height: 3rem;
   /*margin: 4rem auto;*/
 }
+
+
 .me-chat {
   text-align: right;
 }
