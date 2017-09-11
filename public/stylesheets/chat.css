@@ -1,5 +1,5 @@
 .chat-container {
-  width : 60%;
+  width : 50%;
   /*margin-top: 3rem;*/
   /*margin: 7rem auto 7rem auto;*/
   /*border: 1px solid black;*/
@@ -22,7 +22,7 @@
 
 .oscar-chats, .me-chat {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 3rem;
   /*margin: 4rem auto;*/
 }
@@ -35,7 +35,7 @@
 }
 
 #typing-container {
-  width: 60%;
+  width: 50%;
   height: 3rem;
   position: fixed;
   background-color: white;
