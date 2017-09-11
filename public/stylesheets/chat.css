@@ -1,9 +1,17 @@
 .chat-container {
-  width : 65%;
+  width : 60%;
   /*margin-top: 3rem;*/
-  margin: 7rem auto 3rem auto;
-  height: 100%;
-  border: 1px solid black;
+  /*margin: 7rem auto 7rem auto;*/
+  /*border: 1px solid black;*/
+  margin-top: -3rem;
+  height: 70vh;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: scroll;
+
 }
 
 @media only screen and (max-width: 320px) {
@@ -14,11 +22,16 @@
 
 .oscar-chats, .me-chat {
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 3rem;
+  /*margin: 4rem auto;*/
 }
 .me-chat {
   text-align: right;
+}
+.blank-space {
+  width: 100%;
+  height: 4rem;
 }
 
 #typing-container {
@@ -27,7 +40,7 @@
   position: fixed;
   background-color: white;
   border: 1px solid white;
-  bottom: 10rem;
+  bottom: 7rem;
 
   right: 0;
   left: 0;
