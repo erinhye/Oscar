@@ -36,16 +36,17 @@ a:link, a:visited {
 	color:#000000;
 }
 a:hover, a:active {
-	color:#0600CF;
+	/*color:#0600CF;*/
+	text-decoration: underline;
 }
 
 ::-moz-selection {
 	color:#ffffff;
-	background-color: #0600CF;
+	background-color: #000000;
 }
 ::selection {
 	color:#ffffff;
-	background-color: #0600CF;
+	background-color: #000000;
 }
 
 
