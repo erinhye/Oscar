@@ -74,12 +74,18 @@ a:hover, a:active {
   /*border: 1px solid blue;*/
 }
 .contents {
-	margin-left: 7.5%;
+	padding-left: 7.5%;
+	/*margin-top: 6.5rem ;*/
+	/*width: 2000px; /* combined width of all LI's */*/
+	/*overflow: scroll;*/
+
+
+
+	overflow-x: scroll;
+}
+.iconcontainer {
 	margin-top: 6.5rem ;
-	width: 2000px; /* combined width of all LI's */
 
-
-	/*overflow-x: scroll;*/
 }
 #icons {
 	/*border: 1px solid black;*/
