@@ -1,3 +1,17 @@
+body {
+  background: #111111;
+}
+
+::-moz-selection {
+	color:#ffffff;
+	background-color: #7A2DFF;
+}
+::selection {
+	color:#ffffff;
+	background-color: #7A2DFF;
+}
+
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -17,6 +31,12 @@
 	/*box-shadow: 0 0 2px 0 rgba(141,141,141,0.50);*/
 	/*background: #111111;*/
 
+  color: #ffffff;
+
+
+}
+#title {
+  color: inherit;
 }
 #introduction {
   margin: 0 auto;
@@ -31,7 +51,7 @@
   text-align: center;
   display: block;
 
-
+  color: #ffffff;
 }
 #introduction p {
   display: inline-block;
@@ -40,27 +60,43 @@
   width: 50rem;
   text-align: center;
   margin-top: 1rem;
-}
-.start-button {
-  height: 4rem;
-  padding: 0 2rem 0 2rem;
-  margin-top: 2rem;
 
-  border: 2px solid black;
+  color: #ffffff;
+}
+#introduction img {
+  width: 6.8rem;
+  margin-bottom: 1.5rem;
+}
+.start-button, .start-button:link, .start-button:visited {
+  height: 4.3rem;
+  padding: 0 2.5rem 0 2.5rem;
+  margin-top: 2.6rem;
+
+  /*border: 2px solid #7A2DFF;*/
+  background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);
+
   border-radius: 3rem;
   display: inline-block;
   vertical-align: bottom;
   text-align: center;
-  font-size: 1.8rem;
-  line-height: 4rem;
+  font-size: 1.5rem;
+  line-height: 4.3rem;
   /*float: right;*/
   transition-property: all;
   transition-duration: 0.5s;
+  color: #ffffff;
 }
 .start-button:hover {
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
+  padding: 0 3rem 0 3rem;
+
+
+  background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);
+    /*border: 1px solid #979797;*/
+
+
 }
 
 .top-button {
@@ -80,7 +116,7 @@
   transition-property: all;
   transition-duration: 0.5s;
 }
-.start-button:hover {
+.top-button:hover {
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;

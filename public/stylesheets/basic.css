@@ -29,9 +29,15 @@ html, body {
 	/*height:100%;*/
 }
 body {
+	/* Rectangle 16: */
+	/* Rectangle 16 Copy: */
 	/*background-color: #EFF0F1;*/
 	/*background: #111111;*/
 }
+*:focus {
+    outline: none;
+}
+
 img {
 	width: 100%;
 }
@@ -72,6 +78,7 @@ a:hover, a:active {
 	/*background: #FFFFFF;*/
 	/*box-shadow: 0 0 2px 0 rgba(141,141,141,0.50);*/
 	/*background: #111111;*/
+	color: #111111;
 
 }
 .header, #footer {
@@ -134,7 +141,7 @@ a:hover, a:active {
 	height: 3rem;
 	font-weight: 600;/*semi-*/
 	font-size: 2.5rem;/* 5 to 3*/
-	color: #111111;
+	color: inherit;
 	line-height: 8rem; /* 10 to 8*/
 }
 .group {
@@ -151,7 +158,32 @@ a:hover, a:active {
 background: #FFFFFF;
 
 
-border: 1px solid rgba(0,0,0,.3)!important
+/*border: 1px solid rgba(0,0,0,.3)!important*/
+
+color: #666;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #aaa;
+    border-top-color: rgb(170, 170, 170);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(170, 170, 170);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(170, 170, 170);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(170, 170, 170);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
 /*box-shadow:0 0 0 0.1px #000, 0 0 0 0.1px #000 inset;
 -khtml-box-shadow: 0 0 0 0.1px #000, 0 0 0 0.1px #000 inset;
 -moz-box-shadow: 0 0 0 0.1px #000, 0 0 0 0.1px #000 inset;
@@ -159,13 +191,17 @@ border: 1px solid rgba(0,0,0,.3)!important
 
 /*box-shadow: 2px 2px 3px 0 rgba(142,142,142,0.50);*/
 }
+.group:hover {
+
+}
 .group-title {
 	font-size: 1.6rem;
 	font-weight: 600;
 	margin: 0.7rem 0 0 1rem;
+	color: #111111;
 }
 .add {
-	background-color: #111111;
+	/*background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);*/
 }
 
 .list-container {
@@ -203,16 +239,46 @@ border: 1px solid rgba(0,0,0,.3)!important
 
 .add-list-button {
   padding: 10px;
-  background-color: #111111;
+  /*background-color: rgba(255,255,255,0.0);*/
+	/*background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);*/
+
   /* height: 19px; */
   text-align: left;
   font-size: 0.9em;
-  color: #B3D3E5;
+  color: #7A2DFF;
   border: none;
-  transition: background-color 0.3s;
+	transition-property: all;
+  transition-duration: 0.5s;
+
+	border-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: 1px solid #aaa;
+	border-top-color: rgb(122, 45, 255);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-right-color: rgb(122, 45, 255);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(122, 45, 255);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: rgb(122, 45, 255);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+
+
 }
 .add-list-button:hover {
-  background-color: #005586;
+	background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);
+	color: #ffffff;
   cursor: pointer;
 }
 
@@ -228,30 +294,36 @@ border: 1px solid rgba(0,0,0,.3)!important
   cursor: pointer;
 }
 
-.oscar-button {
+.oscar-button, .oscar-button:link, .oscar-button:visited {
 	position: fixed;
 	bottom: 3rem;
 	left: 3rem;
-  height: 3.5rem;
-  padding: 0 2rem 0 2rem;
-  margin-top: 1rem;
+	height: 4.3rem;
+  padding: 0 2.5rem 0 2.5rem;
+  margin-top: 2.6rem;
 
-  border: 2px solid black;
+  /*border: 2px solid #7A2DFF;*/
+  background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);
+
   border-radius: 3rem;
   display: inline-block;
   vertical-align: bottom;
-  float: right;
   text-align: center;
-  font-size: 1.7rem;
-  line-height: 3.5rem;
+  font-size: 1.5rem;
+  line-height: 4.3rem;
   /*float: right;*/
   transition-property: all;
   transition-duration: 0.5s;
+  color: #ffffff;
 }
 .oscar-button:hover {
-  background-color: #000000;
+	background-color: #000000;
   color: #ffffff;
   cursor: pointer;
+  padding: 0 3rem 0 3rem;
+
+
+  background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);
 }
 
 
