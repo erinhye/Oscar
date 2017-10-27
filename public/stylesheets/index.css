@@ -42,7 +42,7 @@
   margin-top: 1rem;
 }
 .start-button {
-  height: 3.3rem;
+  height: 4rem;
   padding: 0 2rem 0 2rem;
   margin-top: 2rem;
 
@@ -52,7 +52,7 @@
   vertical-align: bottom;
   text-align: center;
   font-size: 1.8rem;
-  line-height: 3.3rem;
+  line-height: 4rem;
   /*float: right;*/
   transition-property: all;
   transition-duration: 0.5s;
