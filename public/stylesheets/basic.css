@@ -28,6 +28,10 @@ body { margin: 0; padding: 0; font: 200 1.4rem/2.6rem "Noto Sans", sans-serif; c
 html, body {
 	/*height:100%;*/
 }
+body {
+	/*background-color: #EFF0F1;*/
+	/*background: #111111;*/
+}
 img {
 	width: 100%;
 }
@@ -51,35 +55,33 @@ a:hover, a:active {
 
 
 .container {
-  width: 85%;
+  width: 98%;
   margin: 0 auto;
   /*border: 0.1rem solid black;*/
-  max-width: 1100px;
+  /*max-width: 1100px;*/
   height: 100%;
+	text-align: center;
 }
 .header {
 
   position: fixed;
 	top :0;
-	height: 5rem;
+	height: 8rem;
 	width: 100%;
 	/* Rectangle 3: */
-	background: #FFFFFF;
-	box-shadow: 0 0 2px 0 rgba(141,141,141,0.50);
+	/*background: #FFFFFF;*/
+	/*box-shadow: 0 0 2px 0 rgba(141,141,141,0.50);*/
+	/*background: #111111;*/
 
 }
 .header, #footer {
   z-index: 5;
-  max-height: 5rem;
+  /*max-height: 5rem;*/
   /*border: 1px solid blue;*/
 }
 .contents {
-	padding-left: 7.5%;
-	/*margin-top: 6.5rem ;*/
-	/*width: 2000px; /* combined width of all LI's */*/
-	/*overflow: scroll;*/
-
-
+	/*padding-left: 7.5%;*/
+	margin: auto;
 
 	overflow-x: scroll;
 }
@@ -137,18 +139,20 @@ a:hover, a:active {
 
 #title {
 	height: 3rem;
-	margin-top: 1.2rem;
 	font-weight: 600;/*semi-*/
-	font-size: 2.3rem;
+	font-size: 2.5rem;/* 5 to 3*/
+	color: #111111;
+	line-height: 8rem; /* 10 to 8*/
 }
 .group {
 	/* Rectangle 6 Copy 5: */
 	background: #FFFFFF;
-	box-shadow: 1.5px 1.5px 2px 0 rgba(141,141,141,0.50);
+	/*box-shadow: 1.5px 1.5px 2px 0 rgba(141,141,141,0.50);*/
 	display: inline-block;
 	width: 20rem;/* 23 to 20*/
-	height: 35rem;
-	margin: 1.5rem 2rem 6.2rem 0;
+	/*height: 35rem;*/
+	margin: 1.5rem 2rem 6.2rem 1rem;
+	margin:2rem 1rem;
 	float: left;
 	/* Rectangle 6 Copy 5: */
 background: #FFFFFF;
@@ -168,7 +172,67 @@ border: 1px solid rgba(0,0,0,.3)!important
 	margin: 0.7rem 0 0 1rem;
 }
 .add {
-	background-color: black;
+	background-color: #111111;
+}
+
+.list-container {
+  display: flex;
+  flex: row nowrap;
+  align-items: flex-start;
+}
+
+.list {
+  /*background: #E2E4E6;*/
+}
+
+.list-dimension {
+  border-radius: 3px;
+  /*margin: 10px;*/
+  /*width: 300px;*/
+}
+
+.list-inner-scroll {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 0;
+  max-height: 400px;
+  overflow: scroll;
+}
+
+.list-item {
+  background: white;
+  margin: 10px;
+  margin-bottom: 0;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.add-list-button {
+  padding: 10px;
+  background-color: #111111;
+  /* height: 19px; */
+  text-align: left;
+  font-size: 0.9em;
+  color: #B3D3E5;
+  border: none;
+  transition: background-color 0.3s;
+}
+.add-list-button:hover {
+  background-color: #005586;
+  cursor: pointer;
+}
+
+.add-card-button {
+  display: block;
+  font-size: 0.9em;
+  padding: 10px;
+  color: #8C8C8C;
+  border: none;
+  background-color: transparent;
+}
+.add-card-button:hover {
+  cursor: pointer;
 }
 
 
