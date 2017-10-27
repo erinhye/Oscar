@@ -91,6 +91,7 @@ body {
   color: #ffffff;
   cursor: pointer;
   padding: 0 3rem 0 3rem;
+  text-decoration: none;
 
 
   background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);
