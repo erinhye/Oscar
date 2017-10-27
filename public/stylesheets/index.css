@@ -1,5 +1,9 @@
 body {
   background: #111111;
+  color: #ffffff;
+}
+a:link, a:visited {
+  color: #ffffff;
 }
 
 ::-moz-selection {
@@ -41,6 +45,7 @@ body {
 #introduction {
   margin: 0 auto;
   text-align: center;
+  /*margin-top: -2rem;*/
 }
 #introduction h1 {
   font-size: 3.5rem;
@@ -121,4 +126,12 @@ body {
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
+}
+
+#footer {
+  height: 5.5rem;
+  background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);
+  width: 100%;
+  /*background: #4c47f9;*/
+  bottom:0;
 }
