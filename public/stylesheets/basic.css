@@ -84,18 +84,18 @@ a:hover, a:active {
 	overflow-x: scroll;
 }
 .iconcontainer {
-	margin-top: 6.5rem ;
+	margin-top: 6rem ;
 
 }
 #icons {
 	/*border: 1px solid black;*/
 	display: inline-block;
 	width: 100%;
-	height: 4rem;
+	height: 3.3rem;
 }
 .icon {
-	width: 2.4rem;
-	height: 2.4rem;
+	width: 2rem;
+	height: 2rem;
 	float: left;
 	border: 0.2rem solid black;
 	margin-right: 2rem;
@@ -104,18 +104,34 @@ a:hover, a:active {
 .vertical {
 	width : 0.09rem;
 	background-color: black;
-	height: 2rem;
+	height: 1.6rem;
 	float: left;
 	vertical-align: middle;
-	margin: 0.2rem 0.3rem 0.2rem 0.65rem;
+	margin: 0.2rem 0.2rem 0.2rem 0.52rem;
 }
 .horizontal {
 	height : 0.09rem;
 	background-color: black;
-	width: 2rem;
-	margin-top: 0.65rem;
+	width: 1.6rem;
+	margin-top: 0.55rem;
 	margin-left: auto;
 	margin-right: auto;
+}
+.black {
+	border: 0.2rem solid white;
+	position: absolute;
+	vertical-align: center;
+	margin: 0.54rem;
+
+}
+.hovering-btn {
+	box-shadow: 1.5px 1.5px 2px 0 rgba(141,141,141,0.50);
+	background-color: #000000;
+	position: fixed;
+	bottom: 5rem;
+	left: 5.5rem;
+	width: 3.5rem;
+	height: 3.5rem;
 }
 
 
