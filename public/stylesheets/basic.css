@@ -362,7 +362,14 @@ color: #666;
 	display: inline-block;
 	/*border: 1px solid blue;*/
 	/*vertical-align: middle;*/
+	transition-property: all;
+	transition-duration: 0.5s;
 }
+.list-item:hover {
+  cursor: pointer;
+	background: #F2F1F6;
+}
+
 .list-item h2 {
 	text-align: inherit;
 	display: inherit;
