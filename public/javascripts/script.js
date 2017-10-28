@@ -8,7 +8,11 @@ $(function() {
     </div>
   `;
 
-  var newCard = `<li class="list-item" contenteditable></li>`
+  var newCard = `<li class="list-item">
+    <div class = "prioritized a"></div>
+    <h2>29th, Oct, 2017</h2>
+    <h3>Interaction design With @Darci lynne</h3>
+  </li>`
 
   $('.add-list-button').click(function(e) {
     var $newList = $(newList);
