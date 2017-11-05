@@ -1,0 +1,156 @@
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+div.background{
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  right: -10%;
+}
+div.background2 {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  left: 6%;
+}
+div.background:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 60%;
+  background-color: #80d8ff;
+  border-bottom: 30px solid #40c4ff;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  transform: skewY(30deg);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-shadow: 0px 0px 20px #89898a;
+}
+div.background2:before {
+  content: '';
+  position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 40%;
+   height: 80%;
+   background-color: #80d8ff;
+   border-right: 50px solid #40c4ff;
+   -webkit-transform-origin: 100% 100%;
+   -ms-transform-origin: 100% 100%;
+   transform-origin: 100% 100%;
+   -webkit-transform: skewX(60deg);
+   -ms-transform: skewX(60deg);
+   transform: skewX(60deg);
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-shadow: 0px 0px 20px #89898a;
+ }
+
+.parent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.child {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 760px) {
+  .child {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.btn-facebook {
+  color:#fff;
+  background-color:#3b5998;
+  border-color:rgba(0,0,0,0.2);
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.btn-facebook:hover {
+  background-color:#30487b;
+}
+
+.btn-twitter {
+  background-color: #2ba9e1;
+  border-color:rgba(0,0,0,0.2);
+  color:#fff;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.btn-twitter:hover{
+  background-color: #1c92c7;
+}
+
+.btn-google {
+  color:#fff;
+  background-color:#dd4b39;
+  border-color:rgba(0,0,0,0.2);
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.btn-google:hover {
+  background-color:#ca3523;
+}
+
+.btn-github {
+  color:#fff;
+  background-color:#444;
+  border-color:rgba(0,0,0,0.2);
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+ }
+ .btn-github:hover{
+   background-color:#303030;
+ }
+ 
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+  -webkit-box-shadow:none;
+  box-shadow: none;
+}
+input.invalid:not([type]), input.invalid:not([type]):focus, input[type=text].invalid:not(.browser-default), input[type=text].invalid:not(.browser-default):focus, input[type=password].invalid:not(.browser-default), input[type=password].invalid:not(.browser-default):focus, input[type=email].invalid:not(.browser-default), input[type=email].invalid:not(.browser-default):focus, input[type=url].invalid:not(.browser-default), input[type=url].invalid:not(.browser-default):focus, input[type=time].invalid:not(.browser-default), input[type=time].invalid:not(.browser-default):focus, input[type=date].invalid:not(.browser-default), input[type=date].invalid:not(.browser-default):focus, input[type=datetime].invalid:not(.browser-default), input[type=datetime].invalid:not(.browser-default):focus, input[type=datetime-local].invalid:not(.browser-default), input[type=datetime-local].invalid:not(.browser-default):focus, input[type=tel].invalid:not(.browser-default), input[type=tel].invalid:not(.browser-default):focus, input[type=number].invalid:not(.browser-default), input[type=number].invalid:not(.browser-default):focus, input[type=search].invalid:not(.browser-default), input[type=search].invalid:not(.browser-default):focus, textarea.materialize-textarea.invalid, textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid>input.select-dropdown{
+  -webkit-box-shadow:none;
+  box-shadow: none;
+}
+input.valid:not([type]), input.valid:not([type]):focus, input[type=text].valid:not(.browser-default), input[type=text].valid:not(.browser-default):focus, input[type=password].valid:not(.browser-default), input[type=password].valid:not(.browser-default):focus, input[type=email].valid:not(.browser-default), input[type=email].valid:not(.browser-default):focus, input[type=url].valid:not(.browser-default), input[type=url].valid:not(.browser-default):focus, input[type=time].valid:not(.browser-default), input[type=time].valid:not(.browser-default):focus, input[type=date].valid:not(.browser-default), input[type=date].valid:not(.browser-default):focus, input[type=datetime].valid:not(.browser-default), input[type=datetime].valid:not(.browser-default):focus, input[type=datetime-local].valid:not(.browser-default), input[type=datetime-local].valid:not(.browser-default):focus, input[type=tel].valid:not(.browser-default), input[type=tel].valid:not(.browser-default):focus, input[type=number].valid:not(.browser-default), input[type=number].valid:not(.browser-default):focus, input[type=search].valid:not(.browser-default), input[type=search].valid:not(.browser-default):focus, textarea.materialize-textarea.valid, textarea.materialize-textarea.valid:focus, .select-wrapper.valid>input.select-dropdown{
+  -webkit-box-shadow:none;
+  box-shadow: none;
+}

@@ -1,0 +1,41 @@
+<!-- <% include header %> -->
+<div class="background"></div>
+<div class="background2"></div>
+<div class="parent">
+  <div class="row child">
+    <div class="card">
+      <% if(user.image){ %>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="<%=user.image%>">
+      </div>
+      <% } %>
+      <div class="card-content">
+        <p>회원 정보</p>
+      </div>
+      <div class="card-tabs">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab"><a class="active" href="#test4">이메일</a></li>
+          <li class="tab"><a href="#test5">이름</a></li>
+          <li class="tab"><a href="#test6">가입 방법</a></li>
+          <li class="tab"><a href="#test7">가입일</a></li>
+        </ul>
+      </div>
+      <div class="card-content grey lighten-4">
+        <div id="test4"><%=user.email%></div>
+        <div id="test5"><%=user.name%></div>
+        <div id="test6"><%=user.joinWay%></div>
+        <div id="test7"><%=user.joinDate%></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fixed-action-btn horizontal">
+   <a class="btn-floating btn-large cyan pulse">
+     <i class="large material-icons">add</i>
+   </a>
+   <ul>
+     <li><a class="btn-floating cyan accent-3" href="/logout"><i class="material-icons">power_settings_new</i></a></li>
+     <li><a class="btn-floating teal accent-3" href="/delete"><i class="material-icons">delete</i></a></li>
+   </ul>
+ </div>
+<!-- <% include footer %> -->

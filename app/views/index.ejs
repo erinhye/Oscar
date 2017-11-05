@@ -7,30 +7,42 @@
 <head>
 	<title>Oscar</title>
 
- 	<link rel="stylesheet" type="text/css" href="stylesheets/basic.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+ 	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 
-	<script src="javascripts/jquery-3.1.0.js"></script>
-	<script src="javascripts/script.js"></script>
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/script.js"></script>
 
 
  </head>
 <body>
 <div class = "header">
 	<div class = "container">
-    <!-- <a href ="/">--><p id ="title">Oscar</p><!--</a> -->
+    <!-- <a href ="/"><p id ="title">Oscar</p></a> -->
 		<ul class ="nav">
-			<li><a href ="/signup">Sign Up</a></li>
-			<li><a href ="/signin">Sign In</a></li>
+			<!-- <li><a href ="/signup">Sign Up</a></li> -->
+
+			<% if(isAuthenticated){ %>
+	     <li><a href ="/main">Get Started</a></li>
+	    <% } else { %>
+	     <li><a href ="/signin">Get Started</a></li>
+	    <% } %>
+
 		</ul>
 	</div>
 </div>
 <div class = "container">
 	<div id = "introduction">
-		<img src ="images/oscar-icon.png"/>
+		<!-- <img src ="images/oscar-icon.png"/> -->
 		<h1>Oscar<br/>your best task manager ever</h1>
 		<p>your perfect chat assistant helps you manage your tasks more effectively.</p>
-		<br/><a class = "start-button" href="/main">Get Started</a>
+		<br/>
+
+		<% if(isAuthenticated){ %>
+     <a class = "start-button" href="/main">Get Started</a>
+    <% } else { %>
+     <a class = "start-button" href="/signin">Get Started</a>
+    <% } %>
 
 	</div>
 

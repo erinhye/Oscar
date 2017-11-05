@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en"  xml:lang="en">
+	<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+	<title>Oscar | Sign Up</title>
+
+ 	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/signin.css">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert2.css">
+
+
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/script.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.2/sweetalert2.min.js" charset="utf-8"></script>
+
+  <script src="/js/UserValidate.js" charset="utf-8"></script>
+
+
+
+ </head>
+<body>
+<div class = "header">
+	<div class = "container">
+    <a href ="/"><p id ="title">Oscar</p></a>
+		<!-- <ul class ="nav">
+			<li><a href ="/signup">Sign Up</a></li>
+			<li><a href ="/signin">Sign In</a></li>
+		</ul> -->
+	</div>
+</div>
+<div class = "container">
+	<div id = "sign">
+    <form id="JoinForm" class="col s12 m4 l8" method="post" action="?_csrf=<%=csrfToken%>">
+
+        <!-- <a href="/auth/google" title ="Google" id ="google"><div class ="google">Sign Up with Google</div></a> -->
+
+
+        <input id="join_email" type="email" class="" name="email" placeholder ="Email">
+        <input id="join_password" type="password" class="" name="password" placeholder ="Password">
+        <!-- <input id="join_password2" type="password" class="" name="password2" placeholder ="Password once again"> -->
+        <span>Password must be 8-15 characters including 1 number, 1 special character and 1 alphanumeric character</span>
+				<input id="join_name" type="text" class="" name="name" placeholder ="Username">
+
+        <button class="col s12 btn waves-effect waves-light" type="submit">Sign Up</button>
+
+        <a href="/signin" class="col s12 waves-effect waves-light btn light-blue accent-1"><div class="sign-btn">Sign In</div></a>
+    </form>
+
+	</div>
+
+</div>
+<!-- <div id = "footer">
+</div> -->
+</body>
+</html>

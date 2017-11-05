@@ -62,3 +62,4 @@ typings/
 config.js
 routes/config.js
 public/javascripts/config.js
+config/

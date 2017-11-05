@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var security = require('../lib/security');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', security.csrfProtection(), function(req, res, next) {
   res.render('main', { title: 'Express' });
 });
 
