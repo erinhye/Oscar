@@ -4,6 +4,7 @@ var express = require('express'),
     router = express.Router(),
     mongoose = require('mongoose'),
     userModel = mongoose.model('users'),
+    // tasks = mongoose.model('tasks'),
     security = require('../lib/security'),
     passport = require('passport'),
     localStrategy = require('passport-local').Strategy;

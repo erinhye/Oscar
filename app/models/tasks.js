@@ -3,7 +3,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var tasks = new Schema({
+var tasksSchema = new Schema({
   email: {
     type: String,
     required: [true, '메일은 필수입니다.']
@@ -12,6 +12,10 @@ var tasks = new Schema({
     type: Date,
     required: [true, '패스워드는 필수입니다.'],
     default: Date.now()
+  },
+  deadline: {
+    type: Date,
+    required: [true, '패스워드는 필수입니다.']
   },
   importance: {
     type: Number,
@@ -25,4 +29,4 @@ var tasks = new Schema({
   associate: String
 });
 
-mongoose.model('tasks', tasks);
+mongoose.model('tasks', tasksSchema);
