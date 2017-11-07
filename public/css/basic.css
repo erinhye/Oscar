@@ -329,7 +329,7 @@ color: #666;
 .oscar-button, .oscar-button:link, .oscar-button:visited {
 	position: fixed;
 	bottom: 6%;
-	left: 4.8%;
+	right: 4.8%;
 	height: 4.3rem;
   padding: 0 2.5rem 0 2.5rem;
   margin-top: 2.6rem;
@@ -362,11 +362,13 @@ color: #666;
 	z-index: 10;
 	position: fixed;
 	bottom: 6%;
-	left: 4.8%;
-	width: 23rem;
+	right: 4.8%;
+	width: 28rem;
 	height: 45rem;
-	padding: 0 2.5rem 0 2.5rem;
 	margin-top: 2.6rem;
+	/*padding: 0 2.5rem 0 2.5rem;*/
+	padding: 1rem 0rem 1rem 0rem;
+	box-sizing: border-box;
 
 	/*border: 2px solid #7A2DFF;*/
 	background-image: linear-gradient(-90deg, #7A2DFF 0%, #7A2DFF 77%);
@@ -386,7 +388,11 @@ color: #666;
 
 #close {
 	position: relative;
-	top:3rem;
+	top:1.5rem;
+	left: 10rem;
+}
+#close:hover {
+	cursor: pointer;
 }
 
 .list-item {
