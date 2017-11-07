@@ -358,6 +358,37 @@ color: #666;
   background-image: linear-gradient(-90deg, #612DFF 0%, #7A2DFF 77%);
 }
 
+.oscar-chat {
+	z-index: 10;
+	position: fixed;
+	bottom: 6%;
+	left: 4.8%;
+	width: 23rem;
+	height: 45rem;
+	padding: 0 2.5rem 0 2.5rem;
+	margin-top: 2.6rem;
+
+	/*border: 2px solid #7A2DFF;*/
+	background-image: linear-gradient(-90deg, #7A2DFF 0%, #7A2DFF 77%);
+
+	border-radius: 2.1rem;
+	display: none;
+	vertical-align: bottom;
+	text-align: center;
+	font-size: 1.1rem;
+	line-height: 1.57rem;
+	/*float: right;*/
+	transition-property: all;
+	transition-duration: 0.5s;
+	color: #ffffff;
+
+}
+
+#close {
+	position: relative;
+	top:3rem;
+}
+
 .list-item {
 	text-align: left;
 	display: inline-block;

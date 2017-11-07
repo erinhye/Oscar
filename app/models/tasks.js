@@ -13,6 +13,11 @@ var tasksSchema = new Schema({
     required: [true, '패스워드는 필수입니다.'],
     default: Date.now()
   },
+  group: {
+    type: String,
+    required: [true, '패스워드는 필수입니다.'],
+    default: ""
+  },
   deadline: {
     type: Date,
     required: [true, '패스워드는 필수입니다.']
