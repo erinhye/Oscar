@@ -1,3 +1,7 @@
+var title, desc, associate, group = "";
+var deadline;
+var importance = 1;
+
 $(function() {
   $('.list-container').on('click', '.add-card-button', function(e) {
     console.log("CLICKED");
