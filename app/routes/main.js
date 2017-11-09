@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var security = require('../lib/security');
+var taskModel = mongoose.model('tasks');
 
 /* GET home page. */
 router.get('/', security.csrfProtection(), function(req, res, next) {
