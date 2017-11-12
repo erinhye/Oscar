@@ -22,7 +22,6 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
 
   var task = new taskModel({
     email: req.user.email,
-    date: req.body.date,
     group: req.body.group,
     deadline: req.body.deadline,
     importance: req.body.importance,
@@ -32,8 +31,17 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
   });
 
   task.save(function(err){//저장
-  if err console.log(err);
+    if (err) {
+      console.log(err);
+      throw err;
+    } else {
+      console.log(task);
+      res.send({result:true});
+      //console.log(task);
+    }
   });
+
+
 
 });
 

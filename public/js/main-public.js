@@ -9,9 +9,9 @@ $(function() {
                 url: '/main',
                 dataType: 'json',
                 type: 'POST',
-                data: {'deadline':"hiii", 'title':'title', 'desc':'desc', 'associate':'associate', 'group':'group'},
+                data: {'deadline':"hiii", 'title':'title', 'desc':'desc', 'associate':'associate', 'group':'group', 'importance':'a'},
                 success: function(result) {
-                  colsole.log('OK');
+                  console.log('OK');
                 }
             });
       });
@@ -23,5 +23,16 @@ $(function() {
   $('#close').click(function(e) {
     $('.oscar-chat').hide();
     console.log("YEAH");
+  });
+
+  $('.list-container').on('click', '.add-card-button', function(e) {
+    $('.taskmodal').show();
+  });
+  $('.modal').click(function(e){
+        $('.taskmodal').hide();
+    });
+
+  $('.modal-contents').click(function(event){
+      event.stopPropagation();
   });
 });
