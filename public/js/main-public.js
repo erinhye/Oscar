@@ -12,6 +12,10 @@ $(function() {
                 data: {'deadline':"hiii", 'title':'title', 'desc':'desc', 'associate':'associate', 'group':'group', 'importance':'a'},
                 success: function(result) {
                   console.log('OK');
+                  if ( result['result'] == true ) {
+                    console.log(result['task']['importance']);
+                  }
+                  else {}
                 }
             });
       });

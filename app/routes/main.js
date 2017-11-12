@@ -35,8 +35,8 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
       console.log(err);
       throw err;
     } else {
-      console.log(task);
-      res.send({result:true});
+      console.log(task);//req는 지금 세이브중이니 아직 undefined --  req.task가 아닌 task
+      res.send({result:true, task:task});
       //console.log(task);
     }
   });
