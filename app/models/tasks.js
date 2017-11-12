@@ -19,7 +19,7 @@ var tasksSchema = new Schema({
     default: ""
   },
   deadline: {
-    type: Date,
+    type: String,
     required: [true, '패스워드는 필수입니다.']
   },
   importance: {
