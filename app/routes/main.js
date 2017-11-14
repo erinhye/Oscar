@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
 
   var task = new taskModel({
     email: req.user.email,
-    group: req.body.group,
+    group: 'req.body.group',
     deadline: req.body.deadline,
     importance: req.body.importance,
     title: req.body.title,

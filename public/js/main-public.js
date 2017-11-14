@@ -1,15 +1,15 @@
-var title, desc, associate, group = "";
-var deadline;
-var importance = 1;
+// var title, desc, associate, group = "";
+// var deadline;
+// var importance = 1;
 
 $(function() {
-  $('.list-container').on('click', '.add-card-button', function(e) {
+  $('#addtaskform').on('submit', function(e) {
     console.log("CLICKED");
     $.ajax({
                 url: '/main',
                 dataType: 'json',
                 type: 'POST',
-                data: {'deadline':"hiii", 'title':'title', 'desc':'desc', 'associate':'associate', 'group':'group', 'importance':'a'},
+                data: $('#addtaskform').serializeArray(),
                 success: function(result) {
                   console.log('OK');
                   if ( result['result'] == true ) {
@@ -18,6 +18,7 @@ $(function() {
                   else {}
                 }
             });
+    // console.log($('#addtaskform').serializeArray());
       });
 
   $('.oscar-button').click(function(e) {
