@@ -75,7 +75,7 @@
 
 
 }
-input {
+#input {
   font-size : 1.19rem;
   transition: all 0.2s ease-in-out;
   height: 2.3rem;
