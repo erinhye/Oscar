@@ -8,9 +8,13 @@
 	<title>Oscar</title>
 
  	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/apiai.css">
 	<script src="js/jquery-3.1.0.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/main-public.js"></script>
+	<script src="js/script-public.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/apiai.js"></script>
 
 
 
@@ -73,11 +77,14 @@
 	👨🏼‍💻 Talk to me
 </div>
 <div class ="oscar-chat">
+	<h5>Oscar</h5>
 	<div id ="close">Close</div>
-	<div class ="icon oscar"></div>
+	<div class = "chat-container">
+			<div class ="icon oscar"></div>
 
       <div class ="oscar-chats">Hi, What can I help you with?</div>
       <!-- <div class ="oscar-chats">If you struggle with talking to me, just say "Help" or "Examples"! Then I'll help you!</div> -->
+	</div>
 			<div id = "typing-container">
       <input id ="input"></input>
       <div id ="send" onclick = "send();">Send</div>

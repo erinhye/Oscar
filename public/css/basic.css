@@ -104,14 +104,14 @@ a:hover, a:active {
 	width: 100%;
 	height: 3.3rem;
 }
-.icon {
+/*.icon {
 	width: 2rem;
 	height: 2rem;
 	float: left;
 	border: 0.2rem solid black;
 	margin-right: 2rem;
 	margin-top: 0.7rem;
-}
+}*/
 .vertical {
 	width : 0.09rem;
 	background-color: black;
@@ -377,7 +377,7 @@ color: #666;
 	display: none;
 	vertical-align: bottom;
 	text-align: center;
-	font-size: 1.1rem;
+	font-size: 1.19rem;
 	line-height: 1.57rem;
 	/*float: right;*/
 	transition-property: all;
@@ -385,11 +385,20 @@ color: #666;
 	color: #ffffff;
 
 }
+h5 {
+	position: relative;
+	top:1rem;
+	left: -7.7rem;
+	font-size: 1.7rem;
+	font-weight: bold;
+	display: inline-block;
+}
 
 #close {
 	position: relative;
-	top:1.5rem;
-	left: 10rem;
+	top:1rem;
+	right: -7.7rem;
+	display: inline-block;
 }
 #close:hover {
 	cursor: pointer;
