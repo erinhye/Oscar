@@ -7,8 +7,15 @@ var taskModel = mongoose.model('tasks');
 
 /* GET home page. */
 router.get('/', security.csrfProtection(), function(req, res, next) {
-  res.render('main', { title: 'Express' });
 
+  taskModel.find({'email':req.user.email, 'group':"Undefined"}).sort({date:-1}).exec(function(err, rawContents){
+       // db에서 날짜 순으로 데이터들을 가져옴
+        if(err) throw err;
+
+  res.render('main', {title: 'Express', contents: rawContents});//undefined contents
+  //contents변수엔 db 검색 결과 json 데이터를 저장해줌
+  // res.render('main', { title: 'Express' });
+  });
 });
 
 router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = 포스트
@@ -22,7 +29,6 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
 
   var task = new taskModel({
     email: req.user.email,
-    group: 'req.body.group',
     deadline: req.body.deadline,
     importance: req.body.importance,
     title: req.body.title,

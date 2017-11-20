@@ -411,6 +411,7 @@ h5 {
 	/*vertical-align: middle;*/
 	transition-property: all;
 	transition-duration: 0.5s;
+	width: 83.5%;
 }
 .list-item:hover {
   cursor: pointer;

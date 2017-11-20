@@ -128,7 +128,19 @@ function addTaskWithPerson(givenname, tasktitle) {
               success: function(result) {
                 console.log('OK');
                 if ( result['result'] == true ) {
-                  console.log(result['task']['importance']);
+
+                  var newCard = `<li class='list-item'>
+                    <div class = 'prioritized e'></div>
+                    <h2>29th, Oct, 2017</h2>
+                    <br/>
+                    <h3>`+result['title']+` With @`+result['associate']+`</h3>
+                  </li>`
+
+                  var $newCard = $(newCard);
+                  $('#undef + .list-inner-scroll').last().prepend($newCard);
+                  // $newCard.focus();
+
+                  // console.log(result['task']['importance']);
                 }
                 else {}
               }

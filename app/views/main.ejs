@@ -66,8 +66,25 @@
 
 
 	<div class = "list list-dimension group">
-		<div class = "group-title">Undefined</div>
+		<div class = "group-title" id ="undef">Undefined</div>
 		<ul class="list-inner-scroll">
+
+			<%if(contents.length>0){%>
+	        <%var i = 0;%>
+	        <%contents.forEach(function(item){%>
+	        <%i++;%>
+					<li class="list-item">
+						<div class = "prioritized e"></div>
+						<h2>29th, Oct, 2017</h2>
+						<br/>
+						<h3><%=item.title%> With @<%=item.associate%></h3>
+						<!-- <p>your descriptions are hereyour descriptions are here</p> -->
+
+					</li>
+					<%})%>
+		        <%} else {%>
+							<%}%>
+
     </ul>
 		<button class="add-card-button">Add a card...</button>
 
