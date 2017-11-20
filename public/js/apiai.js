@@ -90,22 +90,17 @@ function send() {
         console.log(data);
         if (data != undefined) {
           console.log("ok");
-          if (data["link"] != undefined){
-            console.log(data["link"]);
-            $(".chat-container").append("<div class ='oscar-chats'><a class ='oscar-link' href ='" + data["link"] + "' target ='_blank'>"+data["linkname"]+"</a></div>");//added the new element
-            // $(".chat-container").append("<div class='oscar-linkbox'><iframe src='"+ data["link"] + "' target='_parent'  width = '300px' height = '200px'/></iframe></div>");//added the new element
-
-            tim++;
-
-
-
-          }//link is abailable
-          else if (data["image"] != undefined) {
-            console.log(data["image"]);
-            $(".chat-container").append("<div class='oscar-image'><img src ='"+ data["image"] +"'/></div>");//added the new element
-
+          if (data["act"] == "add") {
+            if (data["given-name"] != undefined){//given name이있을경우
+              console.log(data["given-name"]);
+              //ajax codes are here and there
+              addTaskWithPerson(data["given-name"], data["tasktitle"]);
+            }//link is abailable
+            else if (data["tasktitle"] != undefined) { //still has a task
+              console.log(data["tasktitle"]);
+              addTask(data["tasktitle"]);
+            }
           }
-
 
         }
         ScrollToBottom();
@@ -120,4 +115,27 @@ function send() {
 
 function setResponse(val) {
  $(".oscar-chats").eq(tim).text(val);
+}
+
+function addTaskWithPerson(givenname, tasktitle) {
+  console.log("WOW");
+  console.log(givenname);
+  $.ajax({
+              url: '/addtask',
+              dataType: 'json',
+              type: 'POST',
+              data: {"associate":givenname, "title":tasktitle},
+              success: function(result) {
+                console.log('OK');
+                if ( result['result'] == true ) {
+                  console.log(result['task']['importance']);
+                }
+                else {}
+              }
+          });
+}
+
+function addTask(tasktitle) {
+  console.log("WOW indeed");
+  console.log(tasktitle);
 }

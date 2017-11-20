@@ -11,6 +11,7 @@ var express = require('express'),
 
 var index = require('../routes/index');
 var main = require('../routes/main');
+var addtask = require('../routes/addtask');
 
 // app.use('/', index);
 // app.use('/main', main);
@@ -19,6 +20,7 @@ module.exports = function (app) {
   app.use('/', router);
   app.use('/', index);
   app.use('/main', main);
+  app.use('/addtask', addtask);
 };
 
 
