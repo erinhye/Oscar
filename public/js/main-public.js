@@ -3,7 +3,7 @@
 // var importance = 1;
 
 $(function() {
-  $('#addtaskform').on('submit', function(e) {
+  $('#addtask-submit').click(function(e){
     console.log("CLICKED");
     $.ajax({
                 url: '/main',
