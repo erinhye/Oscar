@@ -9,7 +9,7 @@ var groupModel = mongoose.model('groups');
 /* GET home page. */
 router.get('/', security.csrfProtection(), function(req, res, next) {
 
-  taskModel.find({'email':req.user.email, 'group':"Undefined"}).sort({date:-1}).exec(function(err, rawContents){
+  taskModel.find({'email':req.user.email}).sort({date:-1}).exec(function(err, rawContents){
        // db에서 날짜 순으로 데이터들을 가져옴
         if(err) throw err;
 
