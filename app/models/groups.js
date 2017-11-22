@@ -11,6 +11,10 @@ var groupsSchema = new Schema({
   name: {
     type: String,
     required: [true, '메일은 필수입니다.']
+  },
+  date: {
+    type: Date,
+    default: Date.now()
   }
 });
 

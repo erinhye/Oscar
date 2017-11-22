@@ -14,10 +14,10 @@ $(function() {
     <h3>Interaction design With @Darci lynne</h3>
   </li>`
 
-  $('.add-list-button').click(function(e) {
-    var $newList = $(newList);
-    $('.list-container').find('.list').last().after($newList);
-  });
+  // $('.add-list-button').click(function(e) {
+  //   var $newList = $(newList);
+  //   $('.list-container').find('.list').last().after($newList);
+  // });
 
   $('.list-container').on('click', '.add-card-button', function(e) {
     var $target = $(e.target);

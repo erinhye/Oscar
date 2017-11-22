@@ -474,7 +474,7 @@ h5 {
 	background: #4873D0;
 }
 
-.modal {
+.modal, .lmodal {
 	display: none;
 	position: fixed;
 	z-index: 1; /* Sit on top */
