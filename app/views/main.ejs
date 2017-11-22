@@ -51,14 +51,19 @@
 	        <%var i = 0;%>
 	        <%contents.forEach(function(item){%>
 	        <%i++;%>
-					<li class="list-item">
-						<div class = "prioritized e"></div>
-						<h2>29th, Oct, 2017</h2>
-						<br/>
-						<h3><%=item.title%> With @<%=item.associate%></h3>
-						<!-- <p>your descriptions are hereyour descriptions are here</p> -->
 
-					</li>
+					<%if('Undefined' == item.group){%>
+						<li class="list-item">
+							<div class = "prioritized e"></div>
+							<h2>29th, Oct, 2017</h2>
+							<br/>
+							<h3><%=item.title%> With @<%=item.associate%></h3>
+							<!-- <p>your descriptions are hereyour descriptions are here</p> -->
+
+						</li>
+					<%} else {%>
+					<%}%>
+
 					<%})%>
 		        <%} else {%>
 							<%}%>
