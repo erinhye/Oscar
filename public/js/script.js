@@ -9,7 +9,7 @@ $(function() {
   `;
 
   var newCard = `<li class="list-item">
-    <div class = "prioritized a"></div>
+    <div class = "prioritized c"></div>
     <h2>29th, Oct, 2017</h2>
     <h3>Interaction design With @Darci lynne</h3>
   </li>`
@@ -27,7 +27,7 @@ $(function() {
 
   function addCardToList($list) {
     var $newCard = $(newCard);
-    $list.find('.list-inner-scroll').append($newCard);
+    $list.find('.list-inner-scroll').prepend($newCard);
     $newCard.focus();
   }
 });

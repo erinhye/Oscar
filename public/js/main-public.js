@@ -14,6 +14,15 @@ $(function() {
                   console.log('OK');
                   if ( result['result'] == true ) {
                     console.log(result['task']['importance']);
+                    console.log(result['task']['group']);
+                    console.log(document.getElementById(result['task']['group']));//OMG IT works
+
+                  var newCard = `<li class="list-item">
+                    <div class = "prioritized c"></div>
+                    <h2>29th, Oct, 2017</h2>
+                    <h3>Interaction design With @Darci lynne</h3>
+                  </li>`
+
                   }
                   else {}
                 }
@@ -43,7 +52,7 @@ $(function() {
 
                     var newList = `
                     <div class="list list-dimension group">
-                      <div class = "group-title">`+result['name']+`</div>
+                      <div class = "group-title" id = "`+result['name']+`">`+result['name']+`</div>
                       <ul class="list-inner-scroll">
                         </ul>
                         <button class="add-card-button">Add a card...</button>
@@ -52,6 +61,7 @@ $(function() {
 
                     var $newList = $(newList);
                     $('.list-container').find('.list').last().after($newList);
+                    $('.taskmodal').hide();//not working
                   }
                   else {}
                 }
