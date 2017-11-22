@@ -4,6 +4,7 @@ var security = require('../lib/security');
 var mongoose = require('mongoose');
 var userModel = mongoose.model('users');
 var taskModel = mongoose.model('tasks');
+var groupModel = mongoose.model('groups');
 
 /* GET home page. */
 router.get('/', security.csrfProtection(), function(req, res, next) {
@@ -12,9 +13,15 @@ router.get('/', security.csrfProtection(), function(req, res, next) {
        // db에서 날짜 순으로 데이터들을 가져옴
         if(err) throw err;
 
-  res.render('main', {title: 'Express', contents: rawContents});//undefined contents
+
+  groupModel.find({'email':req.user.email}).sort({date:1}).exec(function(err, groupContents){
+             // db에서 날짜 순으로 데이터들을 가져옴
+        if(err) throw err;
+
+  res.render('main', {title: 'Express', contents: rawContents, groupContents: groupContents});//undefined contents
   //contents변수엔 db 검색 결과 json 데이터를 저장해줌
   // res.render('main', { title: 'Express' });
+  });
   });
 });
 

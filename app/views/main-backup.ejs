@@ -44,6 +44,28 @@
 <div class = "contents list-container">
 
 	<div class = "list list-dimension group">
+		<div class = "group-title">Interaction Design</div>
+		<ul class="list-inner-scroll">
+      <li class="list-item">
+				<div class = "prioritized a"></div>
+				<h2>29th, Oct, 2017</h2>
+				<h3>Interaction design With @Darci lynne</h3>
+				<!-- <p>your descriptions are hereyour descriptions are here</p> -->
+
+			</li>
+			<li class="list-item">
+				<div class = "prioritized b"></div>
+				<h2>29th, Oct, 2017</h2>
+				<h3>Interaction design With @Darci lynne</h3>
+				<!-- <p>your descriptions are hereyour descriptions are here</p> -->
+
+			</li>    </ul>
+		<button class="add-card-button">Add a card...</button>
+
+	</div>
+
+
+	<div class = "list list-dimension group">
 		<div class = "group-title" id ="Undefined">Undefined</div>
 		<ul class="list-inner-scroll">
 
@@ -67,41 +89,6 @@
 		<button class="add-card-button">Add a card...</button>
 
 	</div>
-
-
-	<%if(groupContents.length>0){%>
-			<%var i = 0;%>
-			<%groupContents.forEach(function(groupitem){%>
-			<%i++;%>
-
-	<div class = "list list-dimension group">
-		<div class = "group-title" id ="d"><%=groupitem.name%></div>
-		<ul class="list-inner-scroll">
-
-			<%if(contents.length>0){%>
-	        <%var i = 0;%>
-	        <%contents.forEach(function(item){%>
-	        <%i++;%>
-					<li class="list-item">
-						<div class = "prioritized e"></div>
-						<h2>29th, Oct, 2017</h2>
-						<br/>
-						<h3><%=item.title%> With @<%=item.associate%></h3>
-						<!-- <p>your descriptions are hereyour descriptions are here</p> -->
-
-					</li>
-					<%})%>
-		        <%} else {%>
-							<%}%>
-
-    </ul>
-		<button class="add-card-button">Add a card...</button>
-
-	</div>
-
-	<%})%>
-		<%} else {%>
-			<%}%>
 
 
 
