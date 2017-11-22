@@ -32,11 +32,13 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
   // var num = req.body.num;
   console.log(deadline);
   console.log(email);
+  console.log(req.body.group);
   //여기부터 시작
 
   var task = new taskModel({
     email: req.user.email,
     deadline: req.body.deadline,
+    group: req.body.group,
     importance: req.body.importance,
     title: req.body.title,
     description: req.body.description,

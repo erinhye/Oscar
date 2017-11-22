@@ -75,24 +75,28 @@
 			<%i++;%>
 
 	<div class = "list list-dimension group">
-		<div class = "group-title" id ="d"><%=groupitem.name%></div>
+		<div class = "group-title" id ="<%=groupitem.name%>"><%=groupitem.name%></div>
 		<ul class="list-inner-scroll">
 
 			<%if(contents.length>0){%>
-	        <%var i = 0;%>
+	        <%var j = 0;%>
 	        <%contents.forEach(function(item){%>
-	        <%i++;%>
-					<li class="list-item">
-						<div class = "prioritized e"></div>
-						<h2>29th, Oct, 2017</h2>
-						<br/>
-						<h3><%=item.title%> With @<%=item.associate%></h3>
-						<!-- <p>your descriptions are hereyour descriptions are here</p> -->
+	        <%j++;%>
+					<%if(item.group == groupitem.name){%>
+						<li class="list-item">
+							<div class = "prioritized e"></div>
+							<h2>29th, Oct, 2017</h2>
+							<br/>
+							<h3><%=item.title%> With @<%=item.associate%></h3>
+							<!-- <p>your descriptions are hereyour descriptions are here</p> -->
 
-					</li>
-					<%})%>
-		        <%} else {%>
-							<%}%>
+						</li>
+					<%} else {%>
+					<%}%>
+
+			<%})%>
+		  <%} else {%>
+			<%}%>
 
     </ul>
 		<button class="add-card-button">Add a card...</button>

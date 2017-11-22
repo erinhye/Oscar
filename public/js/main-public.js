@@ -1,15 +1,22 @@
 // var title, desc, associate, group = "";
 // var deadline;
 // var importance = 1;
+var now;
+var nowId;
 
 $(function() {
   $('#addtask-submit').click(function(e){
     console.log("CLICKED");
+    console.log(nowId);
+
+    var data = $('#addtaskform').serializeArray();
+    data.push({name: 'group', value: nowId});
+
     $.ajax({
                 url: '/main',
                 dataType: 'json',
                 type: 'POST',
-                data: $('#addtaskform').serializeArray(),
+                data: data,
                 success: function(result) {
                   console.log('OK');
                   if ( result['result'] == true ) {
@@ -82,6 +89,9 @@ $(function() {
 
   $('.list-container').on('click', '.add-card-button', function(e) {
     $('.taskmodal').show();
+    now = event.target;
+    console.log(now.parentElement.getElementsByClassName('group-title')[0].id);
+    nowId = now.parentElement.getElementsByClassName('group-title')[0].id;
   });
   $('.modal').click(function(e){
         $('.taskmodal').hide();
