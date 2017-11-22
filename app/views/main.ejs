@@ -52,7 +52,7 @@
 	        <%contents.forEach(function(item){%>
 	        <%i++;%>
 
-					<%if('Undefined' == item.group){%>
+					<%if(item.group == 'Undefined'){%>
 						<li class="list-item">
 							<div class = "prioritized e"></div>
 							<h2>29th, Oct, 2017</h2>
@@ -87,7 +87,7 @@
 	        <%var j = 0;%>
 	        <%contents.forEach(function(item){%>
 	        <%j++;%>
-					<%if(groupitem.name == item.group){%>
+					<%if(item.group == groupitem.name){%>
 						<li class="list-item">
 							<div class = "prioritized e"></div>
 							<h2>29th, Oct, 2017</h2>
