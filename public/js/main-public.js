@@ -8,32 +8,41 @@ $(function() {
   $('#addtask-submit').click(function(e){
     console.log("CLICKED");
     console.log(nowId);
+    e.preventDefault();
+    var tasktitle     = $('#tasktitle').val();
+    var taskdescription    = $('#taskdescription').val();
+    var taskassociate     = $('#taskassociate').val();
+    var taskdeadline     = $('#taskdeadline').val();
+    var taskimportance     = $('#taskimportance').val();
 
-    var data = $('#addtaskform').serializeArray();
-    data.push({name: 'group', value: nowId});
+    if(tasktitle && taskdescription && taskassociate && taskdeadline && taskimportance){
 
-    $.ajax({
-                url: '/main',
-                dataType: 'json',
-                type: 'POST',
-                data: data,
-                success: function(result) {
-                  console.log('OK');
-                  if ( result['result'] == true ) {
-                    console.log(result['task']['importance']);
-                    console.log(result['task']['group']);
-                    console.log(document.getElementById(result['task']['group']));//OMG IT works
+      var data = $('#addtaskform').serializeArray();
+      data.push({name: 'group', value: nowId});
 
-                  var newCard = `<li class="list-item">
-                    <div class = "prioritized c"></div>
-                    <h2>29th, Oct, 2017</h2>
-                    <h3>Interaction design With @Darci lynne</h3>
-                  </li>`
+      $.ajax({
+                  url: '/main',
+                  dataType: 'json',
+                  type: 'POST',
+                  data: data,
+                  success: function(result) {
+                    console.log('OK');
+                    if ( result['result'] == true ) {
+                      console.log(result['task']['importance']);
+                      console.log(result['task']['group']);
+                      console.log(document.getElementById(result['task']['group']));//OMG IT works
 
+                    var newCard = `<li class="list-item">
+                      <div class = "prioritized c"></div>
+                      <h2>29th, Oct, 2017</h2>
+                      <h3>Interaction design With @Darci lynne</h3>
+                    </li>`
+
+                    }
+                    else {}
                   }
-                  else {}
-                }
-            });
+              });
+            }
     // console.log($('#addtaskform').serializeArray());
       });
 
@@ -47,32 +56,38 @@ $(function() {
         $('.listmodal').hide();
     });
   $('#addlist-submit').click(function(e){
-    $.ajax({
-                url: '/addgroup',
-                dataType: 'json',
-                type: 'POST',
-                data: $('#addlistform').serializeArray(),
-                success: function(result) {
-                  console.log('OK');
-                  if ( result['result'] == true ) {
-                    console.log(result['name']);
 
-                    var newList = `
-                    <div class="list list-dimension group">
-                      <div class = "group-title" id = "`+result['name']+`">`+result['name']+`</div>
-                      <ul class="list-inner-scroll">
-                        </ul>
-                        <button class="add-card-button">Add a card...</button>
-                      </div>
-                    `;
+    e.preventDefault();
+    var groupname     = $('#groupname').val();
+    if(groupname){
 
-                    var $newList = $(newList);
-                    $('.list-container').find('.list').last().after($newList);
-                    $('.taskmodal').hide();//not working
+      $.ajax({
+                  url: '/addgroup',
+                  dataType: 'json',
+                  type: 'POST',
+                  data: $('#addlistform').serializeArray(),
+                  success: function(result) {
+                    console.log('OK');
+                    if ( result['result'] == true ) {
+                      console.log(result['name']);
+
+                      var newList = `
+                      <div class="list list-dimension group">
+                        <div class = "group-title" id = "`+result['name']+`">`+result['name']+`</div>
+                        <ul class="list-inner-scroll">
+                          </ul>
+                          <button class="add-card-button">Add a card...</button>
+                        </div>
+                      `;
+
+                      var $newList = $(newList);
+                      $('.list-container').find('.list').last().after($newList);
+                      $('.taskmodal').hide();//not working
+                    }
+                    else {}
                   }
-                  else {}
-                }
-            });
+              });
+          }
     // var $newList = $(newList);
     // $('.list-container').find('.list').last().after($newList);
 
