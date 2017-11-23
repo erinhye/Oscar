@@ -38,6 +38,10 @@ $(function() {
                       <h3>Interaction design With @Darci lynne</h3>
                     </li>`
 
+
+                    $('.taskmodal').hide();//maybe working
+                    $('#addtaskform')[0].reset();
+
                     }
                     else {}
                   }
@@ -82,7 +86,8 @@ $(function() {
 
                       var $newList = $(newList);
                       $('.list-container').find('.list').last().after($newList);
-                      $('.taskmodal').hide();//not working
+                      $('.listmodal').hide();//maybe working
+                      $('#addlistform')[0].reset();
                     }
                     else {}
                   }
