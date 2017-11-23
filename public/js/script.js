@@ -19,15 +19,15 @@ $(function() {
   //   $('.list-container').find('.list').last().after($newList);
   // });
 
-  $('.list-container').on('click', '.add-card-button', function(e) {
-    var $target = $(e.target);
-    var $list = $target.parent('.list');
-    addCardToList($list);
-  });
-
-  function addCardToList($list) {
-    var $newCard = $(newCard);
-    $list.find('.list-inner-scroll').prepend($newCard);
-    $newCard.focus();
-  }
+  // $('.list-container').on('click', '.add-card-button', function(e) {
+  //   var $target = $(e.target);
+  //   var $list = $target.parent('.list');
+  //   addCardToList($list);
+  // });
+  //
+  // function addCardToList($list) {
+  //   var $newCard = $(newCard);
+  //   $list.find('.list-inner-scroll').prepend($newCard);
+  //   $newCard.focus();
+  // }
 });

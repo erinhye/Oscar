@@ -8,7 +8,7 @@ $(function() {
   $('#addtask-submit').click(function(e){
     console.log("CLICKED");
     console.log(nowId);
-    e.preventDefault();
+    // e.preventDefault();
     var tasktitle     = $('#tasktitle').val();
     var taskdescription    = $('#taskdescription').val();
     var taskassociate     = $('#taskassociate').val();
@@ -30,13 +30,21 @@ $(function() {
                     if ( result['result'] == true ) {
                       console.log(result['task']['importance']);
                       console.log(result['task']['group']);
-                      console.log(document.getElementById(result['task']['group']));//OMG IT works
+                      console.log(document.getElementById(result['task']['group']).parentElement.getElementsByClassName('list-inner-scroll')[0].getElementsByClassName('list-item')[0]);//OMG IT works
+                      var location = document.getElementById(result['task']['group']).parentElement.getElementsByClassName('list-inner-scroll')[0].getElementsByClassName('list-item')[0];
+
 
                     var newCard = `<li class="list-item">
                       <div class = "prioritized c"></div>
                       <h2>29th, Oct, 2017</h2>
-                      <h3>Interaction design With @Darci lynne</h3>
+                      <h3>`+result['task']['title']+` With @`+result['task']['associate']+`</h3>
                     </li>`
+
+                    var $newCard = $(newCard);
+                    $('#' + result['task']['group'] + ' + .list-inner-scroll').last().prepend($newCard);
+                    // console.log();
+
+                    // location.prepend($newCard);
 
 
                     $('.taskmodal').hide();//maybe working
@@ -49,6 +57,12 @@ $(function() {
             }
     // console.log($('#addtaskform').serializeArray());
       });
+
+      function addCardToList($list) {
+        var $newCard = $(newCard);
+        $list.find('.list-inner-scroll').prepend($newCard);
+        $newCard.focus();
+      }
 
 
 
