@@ -14,7 +14,7 @@ var tasksSchema = new Schema({
   },
   group: {
     type: String,
-    default: "Undefined"
+    default: "Unsorted"
   },
   deadline: {
     type: String

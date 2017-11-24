@@ -137,7 +137,7 @@ function addTaskWithPerson(givenname, tasktitle) {
                   </li>`
 
                   var $newCard = $(newCard);
-                  $('#Undefined + .list-inner-scroll').last().prepend($newCard);
+                  $('#Unsorted + .list-inner-scroll').last().prepend($newCard);
                   // $newCard.focus();
 
                   // console.log(result['task']['importance']);
