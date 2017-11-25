@@ -36,7 +36,7 @@ $(function() {
 
                     var newCard = `<li class="list-item">
                       <div class = "prioritized c"></div>
-                      <h2>29th, Oct, 2017</h2>
+                      <h2>`+result['task']['dlday']+`th, `+result['task']['dlmonth']+`, `+result['task']['dlyear']+`</h2>
                       <h3>`+result['task']['title']+` With @`+result['task']['associate']+`</h3>
                     </li>`
 

@@ -21,6 +21,15 @@ var tasksSchema = new Schema({
   day: {
     type: String
   },
+  dlyear: {
+    type: String
+  },
+  dlmonth: {
+    type: String
+  },
+  dlday: {
+    type: String
+  },
   group: {
     type: String,
     default: "Unsorted"

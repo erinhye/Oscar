@@ -24,6 +24,10 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
     year: new Date().toISOString().slice(0,10).substring(0,4),
     month: new Date().toISOString().slice(0,10).substring(5,7),
     day: new Date().toISOString().slice(0,10).substring(8,10),
+    //temp
+    dlyear: new Date().toISOString().slice(0,10).substring(0,4),
+    dlmonth: new Date().toISOString().slice(0,10).substring(5,7),
+    dlday: new Date().toISOString().slice(0,10).substring(8,10),
     associate: req.body.associate
   });//base - undefined에 저장
 
@@ -33,7 +37,7 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
       throw err;
     } else {
       console.log(task);//req는 지금 세이브중이니 아직 undefined --  req.task가 아닌 task
-      res.send({result:true, title:title, associate:associate});
+      res.send({result:true, task:task, title:title, associate:associate});
 
       //console.log(task);
     }

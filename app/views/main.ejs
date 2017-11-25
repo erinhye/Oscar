@@ -55,7 +55,7 @@
 					<%if(item.group == 'Unsorted'){%>
 						<li class="list-item">
 							<div class = "prioritized e"></div>
-							<h2>29th, Oct, 2017</h2>
+							<h2><%=item.dlday%>th, <%=item.dlmonth%>, <%=item.dlyear%></h2>
 							<br/>
 							<h3><%=item.title%> With @<%=item.associate%></h3>
 							<!-- <p>your descriptions are hereyour descriptions are here</p> -->
@@ -90,7 +90,7 @@
 					<%if(item.group == groupitem.name){%>
 						<li class="list-item">
 							<div class = "prioritized e"></div>
-							<h2>29th, Oct, 2017</h2>
+							<h2><%=item.dlday%>th, <%=item.dlmonth%>, <%=item.dlyear%></h2>
 							<br/>
 							<h3><%=item.title%> With @<%=item.associate%></h3>
 							<!-- <p>your descriptions are hereyour descriptions are here</p> -->

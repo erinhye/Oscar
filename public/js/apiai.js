@@ -131,7 +131,7 @@ function addTaskWithPerson(givenname, tasktitle) {
 
                   var newCard = `<li class='list-item'>
                     <div class = 'prioritized e'></div>
-                    <h2>29th, Oct, 2017</h2>
+                    <h2>`+result['task']['dlday']+`th, `+result['task']['dlmonth']+`, `+result['task']['dlyear']+`</h2>
                     <br/>
                     <h3>`+result['title']+` With @`+result['associate']+`</h3>
                   </li>`
