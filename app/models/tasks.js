@@ -12,6 +12,15 @@ var tasksSchema = new Schema({
     type: Date,
     default: Date.now()
   },
+  year: {
+    type: String
+  },
+  month: {
+    type: String
+  },
+  day: {
+    type: String
+  },
   group: {
     type: String,
     default: "Unsorted"

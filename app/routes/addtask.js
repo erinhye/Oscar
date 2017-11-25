@@ -20,6 +20,10 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
   var task = new taskModel({
     email: req.user.email,
     title: req.body.title,
+    date: Date.now(),
+    year: new Date().toISOString().slice(0,10).substring(0,4),
+    month: new Date().toISOString().slice(0,10).substring(5,7),
+    day: new Date().toISOString().slice(0,10).substring(8,10),
     associate: req.body.associate
   });//base - undefined에 저장
 
