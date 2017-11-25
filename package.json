@@ -2,8 +2,23 @@
   "name": "oscar",
   "version": "0.0.0",
   "private": true,
+  "license": "Apache-2.0",
+  "author": "Hye Suh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erinhye/Oscar.git"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
   "scripts": {
-    "start": "node app.js"
+    "deploy": "gcloud app deploy",
+    "start": "node app.js",
+    "lint": "samples lint",
+    "pretest": "npm run lint",
+    "system-test": "samples test app",
+    "test": "npm run system-test",
+    "e2e-test": "samples test deploy"
   },
   "dependencies": {
     "apiai": "^4.0.3",
@@ -40,6 +55,16 @@
     "load-grunt-tasks": "^3.2.0",
     "mocha": "^3.0.2",
     "nyc": "^10.0.0",
-    "supertest": "^2.0.0"
+    "supertest": "^2.0.0",
+    "@google-cloud/nodejs-repo-tools": "1.4.17"
+  },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Hello, world!"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
   }
 }
