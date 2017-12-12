@@ -25,7 +25,7 @@
     <!-- <a href ="/">--><p id ="title-center">Oscar</p><!--</a> -->
 		<ul class ="nav">
 			<li><a href ="/">Main</a></li>
-			<li>Sign out</li>
+			<li><a href ="/signout">Sign out</a></li>
 		</ul>
 	</div>
 </div>
@@ -52,10 +52,10 @@
 	        <%contents.forEach(function(item){%>
 	        <%i++;%>
 
-					<%if(item.group == 'Unsorted'){%>
+					<%if(item.group == 'Unsorted' && item.deleted == false){%>
 						<li class="list-item">
-							<div class = "prioritized e"></div>
-							<h2><%=item.dlday%>th, <%=item.dlmonth%>, <%=item.dlyear%></h2>
+							<div class = "prioritized <%=item.importance%>"></div>
+							<h2><%=item.dlday%>, <%=item.dlmonth%>, <%=item.dlyear%></h2>
 							<br/>
 							<h3><%=item.title%> With @<%=item.associate%></h3>
 							<!-- <p>your descriptions are hereyour descriptions are here</p> -->
@@ -79,6 +79,8 @@
 			<%groupContents.forEach(function(groupitem){%>
 			<%i++;%>
 
+	<%if(groupitem.deleted == false){%>
+
 	<div class = "list list-dimension group">
 		<div class = "group-title" id ="<%=groupitem.name%>"><%=groupitem.name%></div>
 		<ul class="list-inner-scroll">
@@ -87,10 +89,10 @@
 	        <%var j = 0;%>
 	        <%contents.forEach(function(item){%>
 	        <%j++;%>
-					<%if(item.group == groupitem.name){%>
+					<%if(item.group == groupitem.name && item.deleted == false){%>
 						<li class="list-item">
-							<div class = "prioritized e"></div>
-							<h2><%=item.dlday%>th, <%=item.dlmonth%>, <%=item.dlyear%></h2>
+							<div class = "prioritized <%=item.importance%>"></div>
+							<h2><%=item.dlday%>, <%=item.dlmonth%>, <%=item.dlyear%></h2>
 							<br/>
 							<h3><%=item.title%> With @<%=item.associate%></h3>
 							<!-- <p>your descriptions are hereyour descriptions are here</p> -->
@@ -107,6 +109,9 @@
 		<button class="add-card-button">Add a card...</button>
 
 	</div>
+
+	<%} else {%>
+	<%}%>
 
 	<%})%>
 		<%} else {%>
@@ -144,11 +149,11 @@
 		<form id ="addtaskform" method="post">
 
 			<input type="text" id ="tasktitle" name ="title" placeholder ="Title"></input>
-			<input type="text" id ="taskdescription" name ="description" placeholder ="Description"></input>
 			<input type="text" id ="taskassociate" name ="associate" placeholder ="Associate with"></input>
 			<input type ="date" id ="taskdeadline" name ="deadline" placeholder ="Deadline" min="2017-01-01"></input>
-			<input type ="number" id ="taskimportance" name ="importance" placeholder ="Importance" min="1" max="5"></input>
 			<input type="button" id ="addtask-submit" value="Submit">
+
+			Title and Deadline data are required
 
 		</form>
 
@@ -161,11 +166,14 @@
 
 			<input type="text" id ="groupname" name ="name" placeholder ="Group name"></input>
 			<input type="button" id ="addlist-submit" value ="ADD">
+
+			엔터!!누르지!마세요!!! (하지만 엔터를 누르셨다면 침착하게 새로고침해서 /main으로 다시 이동)
 		</form>
 
 	</div>
 </div>
 
 </div>
+
 </body>
 </html>

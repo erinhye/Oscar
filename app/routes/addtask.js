@@ -24,7 +24,7 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
     year: new Date().toISOString().slice(0,10).substring(0,4),
     month: new Date().toISOString().slice(0,10).substring(5,7),
     day: new Date().toISOString().slice(0,10).substring(8,10),
-    //temp
+    deadline: new Date().toISOString().slice(0,10),
     dlyear: new Date().toISOString().slice(0,10).substring(0,4),
     dlmonth: new Date().toISOString().slice(0,10).substring(5,7),
     dlday: new Date().toISOString().slice(0,10).substring(8,10),

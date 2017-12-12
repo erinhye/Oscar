@@ -46,9 +46,7 @@ router.post('/', function(req, res, next) {//ajax에서 호추롸는 부분 = �
     dlmonth: req.body.deadline.substring(5,7),
     dlday: req.body.deadline.substring(8,10),
     group: req.body.group,
-    importance: req.body.importance,
     title: req.body.title,
-    description: req.body.description,
     associate: req.body.associate
   });
 

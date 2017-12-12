@@ -1,7 +1,8 @@
 .chat-container {
   width: 100%;
   margin: 0 auto;
-  height: 34rem;
+  /*height: 34rem;*/
+  height: 39rem;
   overflow: scroll;
   margin-top: 2.5rem;
 }
@@ -127,20 +128,21 @@
 
 .oscar-link:link, .oscar-link:visited {
   font-weight: bold;
-  color: #6D3CFB;
+  color: #ffffff;
   font-style: italic;
+  border-radius: 3rem;
 
   /**/
   width : auto;
   padding: 0 2rem 0 2rem;
   margin-top: 1rem;
-  height: 3rem;
-  border: 2px solid #6D3CFB;
+  height: 4.6rem;
+  border: 1px solid #ffffff;
   display: inline-block;
   vertical-align: bottom;
   text-align: center;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
   /*float: right;*/
   transition-property: all;
   transition-duration: 0.5s;
@@ -150,11 +152,11 @@
   font-weight: bold;
   color: #6D3CFB;
   font-style: italic;
-  text-decoration: underline;
-
+  /*text-decoration: underline;*/
+  border: 1px solid #6D3CFB;
   /**/
-  background-color: #6D3CFB;
-  color: #ffffff;
+  background-color: #ffffff;
+  /*color: #ffffff;*/
   cursor: pointer;
 }
 .oscar-linkbox {
@@ -170,4 +172,61 @@
   z-index: 100;
   width:300px;
   margin-left: 8.5rem;
+}
+.oscar-help {
+  color :#111;
+
+  text-align: left;
+  display: inline-block;
+  /* border: 1px solid blue; */
+  /* vertical-align: middle; */
+  transition-property: all;
+  transition-duration: 0.5s;
+  width: 83.5%;
+
+
+
+  background: white;
+  margin: 10px;
+  /* margin-bottom: 1rem; */
+  padding: 10px;
+  border-radius: 3px;
+
+
+  /*color: #ffffff;
+  font-style: italic;
+  border-radius: 3rem;
+
+
+  width : auto;
+  padding: 0 2rem 0 2rem;
+  margin-top: 1rem;
+  height: 2.3rem;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  transition-property: all;
+  transition-duration: 0.5s;*/
+
+}
+
+.oscar-help h3 {
+  font-weight: bold;
+  color: #111;
+  font-size: 1.7rem;
+	line-height: 3.5rem;
+  margin-top: -0.6rem;
+}
+
+.oscar-help p {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+.chat-container a:hover, .chat-container a:active {
+  text-decoration: none;
+  color: #6D3CFB;
 }

@@ -13,7 +13,21 @@ var express = require('express'),
 var index = require('../routes/index');
 var main = require('../routes/main');
 var addtask = require('../routes/addtask');
+var addtaskdl = require('../routes/addtaskdl');
+var addtaskgroupname = require('../routes/addtaskgroupname');
+var addsuperimptask = require('../routes/addsuperimptask');
 var addgroup = require('../routes/addgroup');
+var adddeadlinegroupname = require('../routes/adddeadlinegroupname');
+
+var adddeadlineimp = require('../routes/adddeadlineimp');
+var addgroupimp = require('../routes/addgroupimp');
+var adddeadlinegroupimp = require('../routes/adddeadlinegroupimp');
+
+var deletetask = require('../routes/deletetask');
+var deletegroup = require('../routes/deletegroup');
+
+
+
 
 
 // app.use('/', index);
@@ -24,9 +38,31 @@ module.exports = function (app) {
   app.use('/', index);
   app.use('/main', main);
   app.use('/addtask', addtask);
+  app.use('/addtaskdl', addtaskdl);
+  app.use('/addtaskgroupname', addtaskgroupname);
+  app.use('/addsuperimptask', addsuperimptask);
   app.use('/addgroup', addgroup);
+  app.use('/adddeadlinegroupname', adddeadlinegroupname);
+  app.use('/adddeadlineimp', adddeadlineimp);
+  app.use('/addgroupimp', addgroupimp);
+  app.use('/adddeadlinegroupimp', adddeadlinegroupimp);
+
+  app.use('/deletetask', deletetask);
+  app.use('/deletegroup', deletegroup);
 };
 
+router.get('/api/user_data', function(req, res) {
+
+            if (req.user === undefined) {
+                // The user is not logged in
+                res.json({});
+            } else {
+                res.json({
+                    username: req.user,
+                    sessionID: req.sessionID
+                });
+            }
+});
 
 
 
@@ -98,21 +134,21 @@ function (req, res){
   } else {
     res.clearCookie('remember');
   }
-  res.redirect('/success');
+  res.redirect('/main');
 });
 
 // 성공 한뒤 가는 url
-router.get('/success', security.isLogin, function (req, res){
-  res.render('success',{
-    title: '로그인 성공 페이지',
-    user: req.user
-  });
-});
+// router.get('/success', security.isLogin, function (req, res){
+//   res.render('success',{
+//     title: '로그인 성공 페이지',
+//     user: req.user
+//   });
+// });
 
 // 로그아웃
 router.get('/signout', function (req, res){
   req.logout();
-  res.redirect('/user');
+  res.redirect('/');
 });
 
 // 탈퇴
@@ -122,7 +158,7 @@ router.get('/delete', function (req, res){
       throw err;
     } else {
       req.logout();
-      res.redirect('/user');
+      res.redirect('/');
     }
   });
 });

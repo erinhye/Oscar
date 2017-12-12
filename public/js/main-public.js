@@ -10,12 +10,9 @@ $(function() {
     console.log(nowId);
     // e.preventDefault();
     var tasktitle     = $('#tasktitle').val();
-    var taskdescription    = $('#taskdescription').val();
-    var taskassociate     = $('#taskassociate').val();
     var taskdeadline     = $('#taskdeadline').val();
-    var taskimportance     = $('#taskimportance').val();
 
-    if(tasktitle && taskdescription && taskassociate && taskdeadline && taskimportance){
+    if(tasktitle && taskdeadline){
 
       var data = $('#addtaskform').serializeArray();
       data.push({name: 'group', value: nowId});
@@ -35,8 +32,9 @@ $(function() {
 
 
                     var newCard = `<li class="list-item">
-                      <div class = "prioritized c"></div>
-                      <h2>`+result['task']['dlday']+`th, `+result['task']['dlmonth']+`, `+result['task']['dlyear']+`</h2>
+                      <div class = "prioritized `+result['task']['importance']+`"></div>
+                      <h2>`+result['task']['dlday']+`, `+result['task']['dlmonth']+`, `+result['task']['dlyear']+`</h2>
+                      <br/>
                       <h3>`+result['task']['title']+` With @`+result['task']['associate']+`</h3>
                     </li>`
 

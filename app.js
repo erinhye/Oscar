@@ -4,6 +4,10 @@ var express = require('express'),
   config = require('./config/config'),
   glob = require('glob'),
   mongoose = require('mongoose');
+// const configg = require('./config');
+// const nconf = require('nconf');
+const http = require('http');
+
 
 mongoose.Promise = global.Promise;
 var mongoDB = mongoose.connect(config.db, {

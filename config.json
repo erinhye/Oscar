@@ -1,0 +1,6 @@
+{
+  "GCLOUD_PROJECT": "Oscar-deploy",
+  "DATA_BACKEND": "mongodb",
+  "MONGO_URL": "mongodb://localhost/user-test",
+  "MONGO_COLLECTION": "userss"
+}
