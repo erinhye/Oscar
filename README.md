@@ -7,8 +7,8 @@ http://oscar.hyesuh.com/
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Oscar](#oscar)
-  - [Introducing GUI](#introducing-gui)
-  - [Introducing CUI (chat user interface)](#introducing-cui-chat-user-interface)
+  - [GUI](#introducing-gui)
+  - [CUI (chat user interface)](#introducing-cui-chat-user-interface)
 - [Examples of how to use the chat interface](#examples-of-how-to-use-the-chat-interface)
   - [Greetings](#greetings)
   - [Help](#help)
@@ -49,12 +49,12 @@ http://oscar.hyesuh.com/
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # Oscar
-Oscar is a chat assistant that helps you manage your prioritized tasks more effectively. the principal concept of the project is "combining a chat interface with a normal to-do platform". so basically you can use functions such as adding or deleting tasks through the GUI like normal to-do platforms, but it includes a chat interface in the project, which offers to help you to use more advanced functions in a user-friendly way.
+Oscar is a chat assistant that helps you manage your prioritized tasks more effectively. the principal concept of the project is ‘combining a chat interface with a normal to-do platform’. so basically you can use functions such as adding or deleting tasks by using the GUI like normal to-do platforms, but it includes a chat interface in the project, which offers to help you to use more advanced functions in a user-friendly way.
 
-## Introducing GUI
+## GUI
 Graphical user interface is provided. like normal to-do platforms, it's possible to add tasks or groups to the website through it
 
-## Introducing CUI (chat user interface)
+## CUI (chat user interface)
 press "Talk to me" button to start experiencing the chat interface. below are the basic guidelines to use the chat interface.
 
 # Examples of how to use the chat interface
