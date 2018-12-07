@@ -348,11 +348,3 @@ Are you busy?
 ```
 and so on...
 
-
-# Github links
-
-links are available for a limited-time
-
-https://github.com/erinhye/Oscar
-
-https://github.com/erinhye/Oscar-node-webhook
